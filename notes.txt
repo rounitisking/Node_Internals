@@ -1,0 +1,15 @@
+NODE JS ---
+
+node js has a library called as libUV which is used to for asynchronous input or output 
+node js also has a thread pool - so node js has only one thread but it works differently
+
+working of the node js :--
+node js has node process in which it has two things [main thread and thread pool] so when the top level code (code which is not written inside any rapper function) comes to the node te node execute it first iin the node thread and iske andar sabse pehle require code chalta hai 
+usse pehle events callback register hote hai (event callbacks are liek get req we pull) after that event loop is started in which it is like that if queue mai agar events hone tho loop run hota rahega 
+
+what is inside event loop?
+1. event loop first checks if there any epxired timer callbacks if yes then it will run it first - set timer are set interval and set timeout
+2. the n it runs i/o pooling matlab file read mai agar koi done hai tho uske callbacks ko run krdo
+3. then it set immediate ke callbacks ko run krta hai an set immediate is a part of the node and not the part of the browser 
+4. then ye close callbacks ko run krta hai -- close callbacks are callbakcs that runs on the close of the server or the file reading like fucntion ja ham file read kr rhe hai  or uss time pr koi fucntion run kr raha hai 
+
